@@ -147,7 +147,7 @@ const posts = {
           likesNum: 1,
           comments: 1,
           commentsNum: 1,
-          createdAt: 1
+          createdAt: 1,
         },
       },
     ]);
