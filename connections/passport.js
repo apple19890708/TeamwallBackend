@@ -11,7 +11,7 @@ passport.use(
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       callbackURL:
-        'https://secret-scrubland-17327.herokuapp.com/users/google/callback',
+        'https://team-backend-test.herokuapp.com/users/google/callback',
     },
     ((accessToken, refreshToken, profile, cb) => cb(null, profile[jsonPath])),
   ),
@@ -23,7 +23,7 @@ passport.use(
       clientID: process.env.FACEBOOK_CLIENT_ID,
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
       callbackURL:
-        'https://secret-scrubland-17327.herokuapp.com/users/facebook/callback',
+        'https://team-backend-test.herokuapp.com/users/facebook/callback',
       profileFields: ['id', 'displayName', 'photos', 'email'],
     },
     ((accessToken, refreshToken, profile, cb) => cb(null, profile[jsonPath])),
@@ -35,7 +35,7 @@ passport.use(
     {
       clientID: process.env.DISCORD_CLIENT_ID,
       clientSecret: process.env.DISCORD_CLIENT_SECRET,
-      callbackURL: 'https://secret-scrubland-17327.herokuapp.com/users/discord/callback',
+      callbackURL: 'https://team-backend-test.herokuapp.com/users/discord/callback',
       scope: ['identify', 'email'],
     },
     ((accessToken, refreshToken, profile, cb) => cb(null, profile)),
